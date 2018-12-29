@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Gem Game
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel = "stylesheet" href ="assets/css/style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class= "jumbotron">
+            <h1>Crystal Game</h1>
+                <div id = "instructions">
+                    <p>You will be given a random number to match at the start of the game.</p>
+                    <p>There are four crystals below, by clicking on a crystal you will add a specific amount of points to your total score.</p>
+                    <p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                
+                </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="container">
+            <div class="row">
+                    <div id="gem1" class="col-lg-3 col-md-3 col-sm-3 gem-class">
+                        <img src="assets/images/gem1.png" class="gem-pic">
+                    </div>
+                    <div id="gem2" class="col-lg-3 col-md-3 col-sm-3 gem-class">
+                        <img src="assets/images/gem2.png" class="gem-pic">
+                    </div>
+                    <div id="gem3" class="col-lg-3 col-md-3 col-sm-3 gem-class">
+                        <img src="assets/images/gem3.png" class="gem-pic">
+                    </div>
+                    <div id="gem4" class="col-lg-3 col-md-3 col-sm-3 gem-class">
+                        <img src="assets/images/gem4.png" class="gem-pic">
+                    </div>
+             </div>
+        </div>
+            
+            <div class="row">
+
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <h2>The Magic Number: </h2>
+                        <div id="number"></div>
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <h2>Your Score: </h2>
+                        <div id="score"></div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <h2>Wins: </h2>
+                        <div id="winCount">0</div>
+                    </div>   
+    
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <h2>Losses: </h2>
+                        <div id="lossCount">0</div>
+                    </div>
+    
+                    
+            </div>
+
+    </div>
+
+    
+
+    <script src = "assets/javascript/game.js"></script>
+</body>
+</html>
