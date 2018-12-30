@@ -8,9 +8,7 @@ var gem2;
 var gem3;
 var gem4;
 
-// Declaring wins and losses for tallies
-$('#numberWins').text(wins);
-$('#numberLosses').text(losses);
+
 
 // Get a random number print it to the page
 function getNumber(){
@@ -33,7 +31,13 @@ function onGemClick(gemValue) {
     score = score + gemValue;
     console.log(score);
     $("#score").text(score);
-}
+    if (score === random) {
+        winGame();
+    }
+    else if (score > random) {
+        loseGame();
+    }
+};
 
 $(".gems").on("click", function(){
     // Set a sound here if you can figure it out
@@ -55,7 +59,25 @@ $("#image4").on("click", function(){
     onGemClick(gem4);
 });
 
+function winGame() {
+    reset();
+    wins += 1;
+    $('#winCount').text(wins);
+    
+}
 
+function loseGame() {
+    losses += 1;
+    $('#lossCount').text(losses);
+    reset();
+}
+
+function reset() {
+    // reset stuff here
+    score = 0;
+    assignValues();
+    getNumber();
+}
 
 assignValues();
 getNumber();
