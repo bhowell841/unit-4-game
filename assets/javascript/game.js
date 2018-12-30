@@ -1,53 +1,61 @@
-var score = 0;
-var random;
+var score = 0;  // player score
+var random;     // number to reach
 var wins = 0;
 var losses = 0;
-var values = [];
-var gemPoints = [];
 
-var gem1 = $("#gem1");
-var gem2 = $("#gem2");
-var gem3 = $("#gem3");
-var gem4 = $("#gem4");
+var gem1;
+var gem2;
+var gem3;
+var gem4;
 
+// Declaring wins and losses for tallies
+$('#numberWins').text(wins);
+$('#numberLosses').text(losses);
 
 // Get a random number print it to the page
 function getNumber(){
     random = Math.floor(Math.random() * 102) + 19;
     console.log(random);
     $("#number").text(random);
-
-    return (random);
 }
 
-// Put the gem variables into the array
-gemPoints.push(gem1, gem2, gem3, gem4);
+// Function to give each gem a value between 1 and 12
+function assignValues() {
+    gem1 = Math.floor(Math.random() * 11 + 1);
+    gem2 = Math.floor(Math.random() * 11 + 1);
+    gem3 = Math.floor(Math.random() * 11 + 1);
+    gem4 = Math.floor(Math.random() * 11 + 1);
+    console.log(gem1, gem2, gem3, gem4);
+};
 
-// create a number array and assign values to the gems
-function setPoints(){
-    for (p = 0; p < 4; p++) {
-        values.push(Math.floor(Math.random() * 12) + 1);
-    }
-    console.log(values);
-
-    for (i = 0; i < gemPoints.length; i++){
-        gemPoints[i].attr("data-value", values[i]);
-       // $("#gem").append(gemPoints[i]);
-    console.log(gemPoints)
-    }
-}
-
-
-$(".gem-pic").on("click", function() {
-    var gemValue = ($(this).attr("data-Value"));
-    gemValue = parseInt(gemValue);
-console.log(gemValue);
-    score += gemValue;
+//  Set up the click events
+function onGemClick(gemValue) {
+    score = score + gemValue;
+    console.log(score);
     $("#score").text(score);
+}
 
-    alert(score);
+$(".gems").on("click", function(){
+    // Set a sound here if you can figure it out
+});
+
+$("#image1").on("click", function(){
+    onGemClick(gem1);
+});
+
+$("#image2").on("click", function(){
+    onGemClick(gem2);
+});
+
+$("#image3").on("click", function(){
+    onGemClick(gem3);
+});
+
+$("#image4").on("click", function(){
+    onGemClick(gem4);
 });
 
 
-setPoints();
+
+assignValues();
 getNumber();
