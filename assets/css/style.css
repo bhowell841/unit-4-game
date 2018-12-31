@@ -6,11 +6,12 @@
 
 .navbar {
   background-image: url(../images/prism.png);
-  
+  border-bottom: solid 5px #cccccc;
 }
 
 .navbar-text {
   color: #ffffff;
+  font-family: 'Raleway', sans-serif;
 }
 
 .bottom {
@@ -25,9 +26,31 @@ body {
 
 .jumbotron {
   background-image: url(../images/ravenna.png);
+  border-bottom: solid 1px #cccccc;
+  font-family: 'Raleway', sans-serif;
+  line-height: 30px;
   }
 
 .gems {
   padding-bottom: 10px;
   border-bottom: solid 1px #cccccc;
+  }
+
+.footer {
+  background-image: url(../images/prism.png);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  border-top: solid 2px #cccccc;
+}
+
+.copy {
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
   }
