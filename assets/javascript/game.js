@@ -83,10 +83,9 @@ $("#image4").on("click", function(){
 });
 
 function winGame() {
-    reset();
     wins += 1;
     $('#winCount').text(wins);
-    
+    reset();
 }
 
 function loseGame() {
