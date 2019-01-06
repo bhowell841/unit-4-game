@@ -6,6 +6,7 @@
 
 .navbar {
   background-image: url(../images/prism.png);
+  /* background-image: url(../images/map.jpg); */
   border-bottom: solid 5px #cccccc;
 }
 
@@ -22,10 +23,12 @@
 
 body {
   background-image: url(../images/ravenna.png);
+  /* background-image: url(../images/map.jpg); */
   }
 
 .jumbotron {
   background-image: url(../images/ravenna.png);
+  /* background-image: url(../images/map.jpg); */
   border-bottom: solid 1px #cccccc;
   font-family: 'Raleway', sans-serif;
   line-height: 30px;

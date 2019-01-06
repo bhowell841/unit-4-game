@@ -11,6 +11,9 @@ var gem2;
 var gem3;
 var gem4;
 
+// Variable for the sound
+var lock = new Audio("./assets/images/deadbolt_lock.ogg");
+
 
 
 // Get a random number print it to the page
@@ -62,10 +65,14 @@ function onGemClick(gemValue) {
     }
 };
 
+
+// audio for button click
+// Im so impressed with myself righ now.  Can't believe this works.
 $(".gems").on("click", function(){
-    // Set a sound here if you can figure it out
+    lock.play();
 });
 
+// points for button clicks
 $("#image1").on("click", function(){
     onGemClick(gem1);
 });
